@@ -45,7 +45,7 @@ def replace_func(match_obj):
 def main():
 	outputname = ''
 	if len(sys.argv) != 2:
-		error("wrong number of argu- ments")
+		error("wrong number of arguments")
 	if is_template_name_valid(sys.argv[1]) == False:
 		error("invalid filename")
 	set_settings()

@@ -22,18 +22,22 @@ class CoffeeMachine:
 	def serve(self, drink: beverage.HotBeverage):
 		if self.count == 10:
 			raise self.BrokenMachineException()
-		drink_class = drink.__class__
 		self.count += 1
 		if random.randint(0, 4) == 0:
 			return self.EmptyCup()
-		return drink_class()
+		return drink.__class__()
 
 
 if __name__ == '__main__':
 	cm = CoffeeMachine()
-	list_of_drinks = [beverage.Cappuccino(), beverage.Chocolate(), beverage.Coffee(), beverage.Tea()]
+	list_of_drinks = [
+		beverage.Cappuccino(),
+		beverage.Chocolate(),
+		beverage.Coffee(),
+		beverage.Tea()
+	]
 
-	for _ in range(12):
+	for _ in range(22):
 		try:
 			print(cm.serve(random.choice(list_of_drinks)))
 		except Exception as exp:

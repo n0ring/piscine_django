@@ -10,7 +10,7 @@
 	<h1>{name}</h1>
 	<h1>{surname}</h1>
 	<h2>{profession}</h2>
-	<h1>{age}</h1>
+	<h1>{age} y.o. </h1>
 	<p>Work experience {exp} years </p>
 </body>
 </html>
